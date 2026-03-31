@@ -1,0 +1,21 @@
+ASCENDIA — configuration Stripe rapide
+
+Le zip contient AUSSI:
+- les corrections de navigation (Contact en bas)
+- le bouton "Parler de votre projet" relié à l'email
+- le bouton "Recevoir une proposition" relié à l'email
+- le numéro 06 21 57 08 00
+- l'email ascendia.projets@gmail.com
+
+Pour Stripe:
+1. Crée 3 Payment Links dans Stripe:
+   - Starter
+   - Pro
+   - Premium
+2. Ouvre index.html
+3. Remplace:
+   STRIPE_STARTER_URL
+   STRIPE_PRO_URL
+   STRIPE_PREMIUM_URL
+4. Enregistre
+5. Réupload le zip/site sur Netlify
