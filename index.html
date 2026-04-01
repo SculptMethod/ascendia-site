@@ -25,40 +25,69 @@
   
   <main>
     <section class="hero" id="accueil">
-<div class="container hero-grid">
-
-<div>
-<span class="eyebrow">Agence de création web</span>
-
-<h1 class="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Agence de création web</span>
+          <h1>class=hero-title">
 Attirez plus de clients<br>
-avec un site qui inspire<br>
-<span class="accent">confiance dès les premières secondes</span>
+avec un site qui <span class="accent">inspire confiance</span><br>
+dès les premières secondes
 </h1>
+          <p class="lead">Un site clair, professionnel et optimisé pour générer des demandes.
+Vous donnez une meilleure image et convertissez plus de visiteurs en clients.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#modeles">Choisir un modèle</a>
+            <a class="btn btn-ghost" href="demo-btp.html">Voir la démo BTP</a>
+          </div>
+          <div class="hero-pills">
+            <span>Design premium</span>
+            <span>Adapté mobile</span>
+            <span>Livraison rapide</span>
+          </div>
+        </div>
 
-<p class="lead">
-Un site clair, professionnel et optimisé pour générer des demandes.
-Vous donnez une meilleure image et convertissez plus de visiteurs en clients.
-</p>
+        <div class="hero-visual">
+          <div class="demo-slider-card">
+            <div class="slider-top">
+              <div class="slider-dots"><span></span><span></span><span></span></div>
+              <div class="slider-label">Aperçu des démos</div>
+            </div>
 
-<div class="hero-actions">
-<a class="btn btn-gold" href="#modeles">Voir les modèles</a>
-<a class="btn btn-ghost" href="#contact">Parler de mon projet</a>
-</div>
+            <a class="slider-preview-link" id="sliderPreviewLink" href="demo-btp.html">
+              <div class="slider-preview-image" id="sliderPreviewImage">
+                <div class="slider-preview-overlay">
+                  <div class="slider-preview-badge" id="sliderPreviewBadge">Artisan BTP</div>
+                  <div class="slider-preview-title" id="sliderPreviewTitle">Démo complète — Artisan BTP</div>
+                </div>
+              </div>
+            </a>
 
-<p class="hero-proof">
-Aucun abonnement • Paiement en plusieurs fois • Livraison rapide
-</p>
+            <div class="slider-controls">
+              <button class="slider-btn" id="sliderPrev" aria-label="Démo précédente">←</button>
+              <div class="slider-meta">
+                <strong id="sliderMetaName">Artisan BTP</strong>
+                <span id="sliderMetaCount">1 / 5</span>
+              </div>
+              <button class="slider-btn" id="sliderNext" aria-label="Démo suivante">→</button>
+            </div>
 
-<div class="hero-pills">
-<span>Design premium</span>
-<span>Adapté mobile</span>
-<span>Livraison rapide</span>
-</div>
-</div>
+            <div class="slider-thumbs" id="sliderThumbs">
+              <button class="slider-thumb active" data-demo="0">BTP</button>
+              <button class="slider-thumb" data-demo="1">Resto</button>
+              <button class="slider-thumb" data-demo="2">Fitness</button>
+              <button class="slider-thumb" data-demo="3">Immo</button>
+              <button class="slider-thumb" data-demo="4">Premium</button>
+            </div>
+          </div>
 
-</div>
-</section>
+          <div class="hero-stats">
+            <div class="stat"><strong>5</strong><span>modèles visibles</span></div>
+            <div class="stat"><strong>5</strong><span>démos complètes</span></div>
+            <div class="stat"><strong>Mix</strong><span>premium + pro</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="trust">
       <div class="container trust-row">
