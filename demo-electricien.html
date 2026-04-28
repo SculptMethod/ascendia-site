@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Voltaris Électricité — Électricien à Bastia et en Haute-Corse</title>
+<meta name="description" content="Voltaris Électricité intervient à Bastia, Biguglia et en Haute-Corse pour dépannage électrique, rénovation, tableau électrique, mise en conformité, borne de recharge, alarme et vidéosurveillance." />
+
+<style>
+:root{
+--bg:#07111f;
+--blue:#0b63ce;
+--blue2:#083b7a;
+--yellow:#ffd24a;
+--text:#0f172a;
+--muted:#64748b;
+--white:#ffffff;
+--soft:#f4f7fb;
+--line:#e2e8f0;
+--dark:#06101f;
+--container:1180px;
+--shadow:0 22px 70px rgba(15,23,42,.18);
+--radius:26px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+color:var(--text);
+background:var(--white);
+}
+
+a{text-decoration:none;color:inherit}
+.container{width:min(calc(100% - 40px),var(--container));margin:0 auto}
+
+.header{
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line);
+}
+
+.header-row{
+min-height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:24px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:900;
+font-size:1.2rem;
+color:var(--dark);
+}
+
+.logo-mark{
+width:42px;
+height:42px;
+border-radius:14px;
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--yellow);
+font-weight:900;
+box-shadow:0 12px 30px rgba(11,99,206,.25);
+}
+
+.nav{
+display:flex;
+gap:24px;
+color:#475569;
+font-weight:700;
+font-size:.94rem;
+}
+
+.nav a:hover{color:var(--blue)}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 21px;
+border-radius:14px;
+font-weight:900;
+border:1px solid transparent;
+transition:.2s ease;
+}
+
+.btn:hover{transform:translateY(-1px)}
+
+.btn-primary{
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+color:white;
+box-shadow:0 12px 28px rgba(11,99,206,.22);
+}
+
+.btn-secondary{
+background:white;
+color:var(--blue);
+border-color:#cbd5e1;
+}
+
+.hero{
+background:
+linear-gradient(110deg,rgba(6,16,31,.92),rgba(6,16,31,.72)),
+url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+padding:96px 0 64px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:42px;
+align-items:center;
+}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:10px 14px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.18);
+color:#dbeafe;
+font-weight:800;
+font-size:.86rem;
+}
+
+.eyebrow:before{
+content:"";
+width:8px;
+height:8px;
+border-radius:50%;
+background:var(--yellow);
+box-shadow:0 0 18px var(--yellow);
+}
+
+.hero h1{
+font-size:clamp(2.4rem,5vw,4.7rem);
+line-height:1.02;
+letter-spacing:-.045em;
+margin:20px 0;
+max-width:780px;
+}
+
+.hero h1 span{color:var(--yellow)}
+
+.hero p{
+max-width:640px;
+font-size:1.1rem;
+line-height:1.85;
+color:#dbeafe;
+margin:0 0 28px;
+}
+
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.hero-proof{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+.hero-proof span{
+padding:10px 14px;
+border-radius:999px;
+background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.16);
+color:#f8fafc;
+font-weight:700;
+font-size:.9rem;
+}
+
+.emergency-card{
+background:white;
+color:var(--text);
+border-radius:30px;
+padding:28px;
+box-shadow:var(--shadow);
+}
+
+.emergency-card h2{
+font-size:1.7rem;
+line-height:1.15;
+margin:0 0 12px;
+}
+
+.emergency-card p{
+color:var(--muted);
+margin:0 0 22px;
+line-height:1.75;
+}
+
+.info-list{
+display:grid;
+gap:12px;
+margin-bottom:22px;
+}
+
+.info-list div{
+padding:15px;
+border-radius:18px;
+background:var(--soft);
+border:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+gap:12px;
+}
+
+.info-list strong{color:var(--dark)}
+.info-list span{color:var(--muted);font-weight:700}
+
+.trust{
+padding:22px 0;
+background:var(--soft);
+border-bottom:1px solid var(--line);
+}
+
+.trust-row{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+text-align:center;
+}
+
+.trust-row span{
+background:white;
+border:1px solid var(--line);
+border-radius:18px;
+padding:16px;
+font-weight:800;
+color:#334155;
+}
+
+.section{padding:86px 0}
+
+.heading{
+max-width:760px;
+margin-bottom:34px;
+}
+
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+.heading h2,
+.two-col h2{
+font-size:clamp(2rem,4vw,3.25rem);
+line-height:1.06;
+letter-spacing:-.035em;
+margin:14px 0;
+color:var(--dark);
+}
+
+.heading p,
+.two-col p,
+.service p,
+.area-card p,
+.realisation p,
+.faq p,
+.footer p{
+color:var(--muted);
+line-height:1.82;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.service{
+padding:28px;
+border-radius:26px;
+background:white;
+border:1px solid var(--line);
+box-shadow:0 14px 40px rgba(15,23,42,.06);
+}
+
+.icon{
+width:54px;
+height:54px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#eff6ff;
+color:var(--blue);
+font-size:1.45rem;
+margin-bottom:18px;
+}
+
+.service h3{
+font-size:1.25rem;
+margin:0 0 10px;
+}
+
+.alt{
+background:var(--soft);
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:42px;
+align-items:center;
+}
+
+.checks{
+display:grid;
+gap:14px;
+margin-top:24px;
+}
+
+.checks div{
+display:flex;
+gap:12px;
+align-items:flex-start;
+padding:16px;
+border-radius:18px;
+background:white;
+border:1px solid var(--line);
+}
+
+.checks strong{
+color:var(--blue);
+}
+
+.photo-card{
+min-height:470px;
+border-radius:30px;
+background:
+linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.32)),
+url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+box-shadow:var(--shadow);
+}
+
+.areas{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:22px;
+}
+
+.area-card{
+padding:30px;
+border-radius:28px;
+background:white;
+border:1px solid var(--line);
+box-shadow:0 14px 40px rgba(15,23,42,.06);
+}
+
+.area-tags{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+
+.area-tags span{
+padding:10px 13px;
+border-radius:999px;
+background:#eff6ff;
+color:var(--blue2);
+font-weight:800;
+}
+
+.realisations{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.realisation{
+border-radius:26px;
+overflow:hidden;
+background:white;
+border:1px solid var(--line);
+box-shadow:0 14px 40px rgba(15,23,42,.06);
+}
+
+.realisation-img{
+min-height:210px;
+background-size:cover;
+background-position:center;
+}
+
+.r1{background-image:url("https://images.unsplash.com/photo-1565608087341-404b25492fee?auto=format&fit=crop&w=1200&q=80")}
+.r2{background-image:url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80")}
+.r3{background-image:url("https://images.unsplash.com/photo-1610056494052-6a4f83a8368c?auto=format&fit=crop&w=1200&q=80")}
+
+.realisation div:last-child{
+padding:22px;
+}
+
+.cta-band{
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+color:white;
+}
+
+.cta-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:28px;
+}
+
+.cta-card h2{
+font-size:clamp(2rem,4vw,3.2rem);
+line-height:1.06;
+margin:0 0 14px;
+}
+
+.cta-card p{
+color:#dbeafe;
+line-height:1.8;
+max-width:680px;
+}
+
+.faq-list{
+display:grid;
+gap:14px;
+max-width:900px;
+}
+
+details{
+padding:22px;
+border-radius:20px;
+background:white;
+border:1px solid var(--line);
+}
+
+summary{
+cursor:pointer;
+font-weight:900;
+color:var(--dark);
+}
+
+details p{
+margin-bottom:0;
+color:var(--muted);
+line-height:1.8;
+}
+
+.footer{
+background:var(--dark);
+color:white;
+padding:46px 0;
+}
+
+.footer-row{
+display:flex;
+justify-content:space-between;
+gap:28px;
+align-items:flex-start;
+}
+
+.footer strong{
+font-size:1.25rem;
+}
+
+.footer p{
+color:#cbd5e1;
+}
+
+.footer-links{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+color:#cbd5e1;
+}
+
+@media(max-width:1000px){
+.hero-grid,
+.two-col,
+.areas,
+.cta-card{
+grid-template-columns:1fr;
+display:grid;
+}
+
+.services-grid,
+.realisations,
+.trust-row{
+grid-template-columns:repeat(2,1fr);
+}
+
+.nav{display:none}
+}
+
+@media(max-width:760px){
+.container{width:min(calc(100% - 28px),var(--container))}
+.header-row{flex-direction:column;align-items:flex-start;padding:16px 0}
+.hero{padding:70px 0 46px}
+.services-grid,
+.realisations,
+.trust-row{
+grid-template-columns:1fr;
+}
+.footer-row{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-row">
+<a class="logo" href="#accueil">
+<span class="logo-mark">V</span>
+<span>VOLTARIS ÉLECTRICITÉ</span>
+</a>
+
+<nav class="nav">
+<a href="#services">Services</a>
+<a href="#confiance">Pourquoi nous</a>
+<a href="#zone">Zone</a>
+<a href="#realisations">Réalisations</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="btn btn-primary" href="tel:+33600000000">Appeler maintenant</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">Électricien à Bastia & Haute-Corse</span>
+
+<h1>
+Dépannage, rénovation et mise en conformité électrique <span>avec un travail propre et sécurisé.</span>
+</h1>
+
+<p>
+Voltaris Électricité accompagne particuliers et professionnels pour les travaux électriques,
+les dépannages, les tableaux, les bornes de recharge, l’alarme et la vidéosurveillance.
+</p>
+
+<div class="hero-actions">
+<a class="btn btn-primary" href="tel:+33600000000">06 00 00 00 00</a>
+<a class="btn btn-secondary" href="mailto:contact@voltaris-electricite.fr">Demander un devis</a>
+</div>
+
+<div class="hero-proof">
+<span>Devis clair</span>
+<span>Intervention locale</span>
+<span>Travail soigné</span>
+<span>Normes électriques</span>
+</div>
+</div>
+
+<div class="emergency-card">
+<h2>Besoin d’un électricien fiable ?</h2>
+<p>
+Expliquez votre besoin : panne, rénovation, tableau, prise, éclairage, borne ou sécurité.
+Une réponse claire vous est apportée rapidement.
+</p>
+
+<div class="info-list">
+<div><strong>Dépannage</strong><span>Selon disponibilité</span></div>
+<div><strong>Zone</strong><span>Bastia & alentours</span></div>
+<div><strong>Clientèle</strong><span>Particuliers / pros</span></div>
+</div>
+
+<a class="btn btn-primary" href="#contact">Décrire mon besoin</a>
+</div>
+</div>
+</section>
+
+<section class="trust">
+<div class="container trust-row">
+<span>Installation électrique</span>
+<span>Rénovation complète</span>
+<span>Tableau électrique</span>
+<span>Borne de recharge</span>
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="container heading center">
+<span class="eyebrow">Prestations</span>
+<h2>Des services électriques pour les logements, commerces et locaux professionnels.</h2>
+<p>
+Chaque intervention est réalisée avec une approche claire : comprendre le besoin, proposer une solution adaptée
+et livrer un travail propre.
+</p>
+</div>
+
+<div class="container services-grid">
+<article class="service">
+<div class="icon">⚡</div>
+<h3>Dépannage électrique</h3>
+<p>Panne de courant, disjonction, prise défectueuse, éclairage en panne ou problème sur tableau électrique.</p>
+</article>
+
+<article class="service">
+<div class="icon">🏠</div>
+<h3>Rénovation électrique</h3>
+<p>Rénovation partielle ou complète d’appartement, maison, local commercial ou bureau.</p>
+</article>
+
+<article class="service">
+<div class="icon">🧰</div>
+<h3>Tableau électrique</h3>
+<p>Remplacement, création, protection différentielle, repérage et mise au propre du tableau.</p>
+</article>
+
+<article class="service">
+<div class="icon">✅</div>
+<h3>Mise en conformité</h3>
+<p>Amélioration de la sécurité, adaptation aux besoins actuels et remise à niveau de l’installation.</p>
+</article>
+
+<article class="service">
+<div class="icon">🔋</div>
+<h3>Borne de recharge</h3>
+<p>Préparation et alimentation électrique pour borne de recharge de véhicule électrique.</p>
+</article>
+
+<article class="service">
+<div class="icon">🎥</div>
+<h3>Alarme & vidéosurveillance</h3>
+<p>Installation de solutions de sécurité : caméra, alarme, interphone, visiophone et contrôle d’accès.</p>
+</article>
+</div>
+</section>
+
+<section class="section alt" id="confiance">
+<div class="container two-col">
+<div>
+<span class="eyebrow">Pourquoi nous choisir</span>
+<h2>Un électricien clair, sérieux et attentif aux détails.</h2>
+<p>
+Un bon travail électrique ne se résume pas à “faire fonctionner”. Il doit être propre, lisible,
+sécurisé et adapté à l’usage réel du client.
+</p>
+
+<div class="checks">
+<div><strong>✓</strong><span>Explications claires avant intervention</span></div>
+<div><strong>✓</strong><span>Solutions adaptées au logement ou au local</span></div>
+<div><strong>✓</strong><span>Travail propre et finitions soignées</span></div>
+<div><strong>✓</strong><span>Contact simple par téléphone ou email</span></div>
+</div>
+</div>
+
+<div class="photo-card"></div>
+</div>
+</section>
+
+<section class="section" id="zone">
+<div class="container heading center">
+<span class="eyebrow">Zone d’intervention</span>
+<h2>Intervention à Bastia, Biguglia et en Haute-Corse.</h2>
+<p>
+Voltaris Électricité intervient auprès des particuliers, commerces, bureaux et petites entreprises.
+</p>
+</div>
+
+<div class="container areas">
+<article class="area-card">
+<h3>Villes principales</h3>
+<p>Intervention selon disponibilité sur Bastia et les communes proches.</p>
+<div class="area-tags">
+<span>Bastia</span>
+<span>Biguglia</span>
+<span>Furiani</span>
+<span>Lucciana</span>
+<span>Borgo</span>
+</div>
+</article>
+
+<article class="area-card">
+<h3>Types de projets</h3>
+<p>Dépannage, rénovation, création de lignes, tableau, éclairage, sécurité, bornes et petits travaux.</p>
+<div class="area-tags">
+<span>Maison</span>
+<span>Appartement</span>
+<span>Commerce</span>
+<span>Bureau</span>
+<span>Local pro</span>
+</div>
+</article>
+</div>
+</section>
+
+<section class="section alt" id="realisations">
+<div class="container heading center">
+<span class="eyebrow">Réalisations</span>
+<h2>Quelques exemples de travaux électriques.</h2>
+<p>
+Photos d’illustration pour présenter le type d’interventions possibles sur un site professionnel.
+</p>
+</div>
+
+<div class="container realisations">
+<article class="realisation">
+<div class="realisation-img r1"></div>
+<div>
+<h3>Rénovation électrique</h3>
+<p>Remise au propre d’une installation et adaptation aux besoins du logement.</p>
+</div>
+</article>
+
+<article class="realisation">
+<div class="realisation-img r2"></div>
+<div>
+<h3>Tableau électrique</h3>
+<p>Organisation, protections, repérage et amélioration de la sécurité.</p>
+</div>
+</article>
+
+<article class="realisation">
+<div class="realisation-img r3"></div>
+<div>
+<h3>Éclairage & prises</h3>
+<p>Ajout de points lumineux, prises, commandes et finitions propres.</p>
+</div>
+</article>
+</div>
+</section>
+
+<section class="section cta-band" id="contact">
+<div class="container cta-card">
+<div>
+<h2>Un besoin électrique ? Parlons-en simplement.</h2>
+<p>
+Décrivez votre projet ou votre panne. Nous vous répondons avec une approche claire et adaptée.
+</p>
+</div>
+
+<div class="hero-actions">
+<a class="btn btn-secondary" href="tel:+33600000000">Appeler</a>
+<a class="btn btn-secondary" href="mailto:contact@voltaris-electricite.fr">Demander un devis</a>
+</div>
+</div>
+</section>
+
+<section class="section faq">
+<div class="container heading center">
+<span class="eyebrow">Questions fréquentes</span>
+<h2>Avant de prendre contact.</h2>
+</div>
+
+<div class="container faq-list">
+<details>
+<summary>Intervenez-vous pour les petites pannes ?</summary>
+<p>Oui, selon disponibilité, les petits dépannages peuvent être pris en charge : prise, éclairage, disjonction ou problème localisé.</p>
+</details>
+
+<details>
+<summary>Faites-vous les rénovations complètes ?</summary>
+<p>Oui, la rénovation complète ou partielle d’une installation électrique peut être étudiée après échange sur le projet.</p>
+</details>
+
+<details>
+<summary>Installez-vous des bornes de recharge ?</summary>
+<p>Voltaris peut préparer l’alimentation et les protections nécessaires selon la configuration du logement ou du local.</p>
+</details>
+
+<details>
+<summary>Comment demander un devis ?</summary>
+<p>Vous pouvez appeler ou envoyer un email avec les informations principales : adresse, type de besoin, photos si possible et délai souhaité.</p>
+</details>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container footer-row">
+<div>
+<strong>VOLTARIS ÉLECTRICITÉ</strong>
+<p>Électricien à Bastia et en Haute-Corse.</p>
+<p>Site exemple réalisé par ASCENDIA.</p>
+</div>
+
+<div class="footer-links">
+<a href="#services">Services</a>
+<a href="#zone">Zone</a>
+<a href="#contact">Contact</a>
+<a href="index.html">Retour ASCENDIA</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
