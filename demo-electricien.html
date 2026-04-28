@@ -4,131 +4,283 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Voltaris Électricité — Électricien à Borgo, Bastia et Haute-Corse</title>
-<meta name="description" content="Électricien à Borgo, Bastia, Biguglia et Lucciana. Dépannage, rénovation électrique, tableau électrique, éclairage, borne de recharge, alarme et vidéosurveillance." />
+<title>Voltaris Électricité — Électricien à Borgo, Bastia & Haute-Corse</title>
+<meta name="description" content="Électricien à Borgo, Bastia, Biguglia et Lucciana. Dépannage, rénovation électrique, tableau électrique, éclairage, borne de recharge, interphonie, alarme et vidéosurveillance." />
 
 <style>
 :root{
---navy:#07111f;--blue:#0b63ce;--blue2:#084996;--yellow:#ffd24a;
---white:#fff;--soft:#f4f7fb;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;
---green:#16a34a;--shadow:0 22px 70px rgba(15,23,42,.16);--container:1180px
+--dark:#06101f;
+--navy:#08172b;
+--blue:#075ec8;
+--blue2:#0b7cff;
+--gold:#ffd24a;
+--white:#ffffff;
+--soft:#f5f8fc;
+--text:#0d1728;
+--muted:#64748b;
+--line:#e2e8f0;
+--green:#16a34a;
+--container:1180px;
+--shadow:0 30px 90px rgba(6,16,31,.16);
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff}
 a{text-decoration:none;color:inherit}
 .container{width:min(calc(100% - 40px),var(--container));margin:0 auto}
 
-.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.header-row{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{display:flex;align-items:center;gap:12px;font-weight:950;font-size:1.15rem}
-.logo-mark{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;color:var(--yellow);box-shadow:0 12px 28px rgba(11,99,206,.24)}
-.nav{display:flex;gap:22px;color:#475569;font-weight:800;font-size:.92rem}
+.header{
+position:sticky;top:0;z-index:50;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line);
+}
+.header-row{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo{display:flex;align-items:center;gap:13px;font-weight:950;font-size:1.15rem;letter-spacing:-.02em}
+.logo-mark{
+width:46px;height:46px;border-radius:16px;
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+display:flex;align-items:center;justify-content:center;
+color:var(--gold);font-weight:950;
+box-shadow:0 16px 35px rgba(7,94,200,.26)
+}
+.nav{display:flex;gap:24px;color:#475569;font-weight:850;font-size:.92rem}
 .nav a:hover{color:var(--blue)}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:14px;font-weight:900;border:1px solid transparent;transition:.2s ease}
+.btn{
+display:inline-flex;align-items:center;justify-content:center;
+padding:14px 22px;border-radius:14px;
+font-weight:950;border:1px solid transparent;transition:.22s ease
+}
 .btn:hover{transform:translateY(-1px)}
-.btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;box-shadow:0 12px 28px rgba(11,99,206,.22)}
-.btn-secondary{background:white;color:var(--blue);border-color:#cbd5e1}
-.btn-yellow{background:var(--yellow);color:#111827;box-shadow:0 12px 30px rgba(255,210,74,.24)}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white;box-shadow:0 16px 34px rgba(7,94,200,.25)}
+.btn-light{background:white;color:var(--blue);border-color:#d6e0ec}
+.btn-gold{background:var(--gold);color:#111827;box-shadow:0 16px 34px rgba(255,210,74,.24)}
 
-.hero{background:linear-gradient(110deg,rgba(6,16,31,.94),rgba(6,16,31,.72)),url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=2000&q=80");background-size:cover;background-position:center;color:white;padding:96px 0 64px}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#dbeafe;font-weight:900;font-size:.86rem}
-.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 18px var(--yellow)}
-.hero h1{font-size:clamp(2.45rem,5vw,4.85rem);line-height:1.02;letter-spacing:-.05em;margin:20px 0;max-width:820px}
-.hero h1 span{color:var(--yellow)}
-.hero p{max-width:640px;font-size:1.08rem;line-height:1.75;color:#dbeafe;margin:0 0 28px}
+.hero{
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(110deg,rgba(6,16,31,.96),rgba(6,16,31,.72)),
+url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=2200&q=90");
+background-size:cover;
+background-position:center;
+color:white;
+padding:108px 0 74px;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.eyebrow{
+display:inline-flex;align-items:center;gap:10px;
+padding:10px 15px;border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.18);
+color:#dbeafe;font-weight:900;font-size:.85rem
+}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold)}
+.hero h1{
+font-size:clamp(2.6rem,5vw,5rem);
+line-height:1.01;
+letter-spacing:-.055em;
+margin:20px 0;
+max-width:820px
+}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:650px;font-size:1.1rem;line-height:1.78;color:#dbeafe;margin:0 0 30px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-proof{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.hero-proof span{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);font-weight:800;font-size:.9rem}
+.hero-proof span{
+padding:10px 14px;border-radius:999px;
+background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.16);
+font-weight:850;font-size:.9rem
+}
 
-.request-card{background:white;color:var(--text);border-radius:30px;padding:28px;box-shadow:var(--shadow)}
-.request-card h2{font-size:1.75rem;line-height:1.14;margin:0 0 12px}
-.request-card p{color:var(--muted);margin:0 0 22px;line-height:1.65}
+.hero-card{
+background:white;
+color:var(--text);
+border-radius:32px;
+padding:28px;
+box-shadow:var(--shadow);
+}
+.hero-card h2{font-size:1.8rem;line-height:1.16;margin:0 0 12px;color:var(--dark)}
+.hero-card p{color:var(--muted);line-height:1.7;margin:0 0 22px}
 .info-list{display:grid;gap:12px;margin-bottom:22px}
-.info-list div{padding:15px;border-radius:18px;background:var(--soft);border:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
-.info-list span{color:var(--muted);font-weight:800}
+.info-list div{
+padding:16px;border-radius:18px;background:var(--soft);
+border:1px solid var(--line);
+display:flex;justify-content:space-between;gap:12px
+}
+.info-list strong{color:var(--dark)}
+.info-list span{color:var(--muted);font-weight:850}
 
-.trust{padding:22px 0;background:var(--soft);border-bottom:1px solid var(--line)}
+.trust{background:var(--soft);border-bottom:1px solid var(--line);padding:22px 0}
 .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center}
-.trust-row span{background:white;border:1px solid var(--line);border-radius:18px;padding:16px;font-weight:900;color:#334155}
+.trust-row span{
+background:white;border:1px solid var(--line);
+border-radius:18px;padding:16px;font-weight:900;color:#334155
+}
 
-.section{padding:82px 0}
-.heading{max-width:760px;margin-bottom:34px}
+.section{padding:92px 0}
+.alt{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.heading{max-width:780px;margin-bottom:36px}
 .center{text-align:center;margin-left:auto;margin-right:auto}
-h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.06;letter-spacing:-.04em;margin:14px 0;color:#06101f}
-h3{margin:0;color:#06101f}
-.heading p,.service p,.work p,.review p,.area-card p,.footer p,.legal-card p,.focus-card p{color:var(--muted);line-height:1.7}
+h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.04em;margin:14px 0;color:var(--dark)}
+h3{margin:0;color:var(--dark)}
+.heading p,.service p,.feature p,.work p,.review p,.area-card p,.legal-card p,.footer p,.step p{
+color:var(--muted);line-height:1.72
+}
 
-.services-grid,.works,.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service,.work,.review,.legal-card,.area-card,.focus-card{border-radius:28px;background:white;border:1px solid var(--line);box-shadow:0 14px 40px rgba(15,23,42,.06)}
-.service{padding:28px}
-.icon{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:#eff6ff;color:var(--blue);font-size:1.5rem;margin-bottom:18px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{
+padding:28px;border-radius:28px;background:white;
+border:1px solid var(--line);
+box-shadow:0 14px 42px rgba(15,23,42,.06)
+}
+.icon{
+width:58px;height:58px;border-radius:19px;
+display:flex;align-items:center;justify-content:center;
+background:#eff6ff;color:var(--blue);font-size:1.5rem;margin-bottom:18px
+}
 .service h3{font-size:1.25rem;margin-bottom:10px}
 
-.alt{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
 .checks{display:grid;gap:14px;margin-top:24px}
-.checks div{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:18px;background:white;border:1px solid var(--line)}
+.checks div{
+display:flex;gap:12px;align-items:flex-start;
+padding:16px;border-radius:18px;background:white;border:1px solid var(--line)
+}
 .checks strong{color:var(--green)}
-.photo-card{min-height:460px;border-radius:30px;background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.28)),url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1500&q=80");background-size:cover;background-position:center;box-shadow:var(--shadow)}
 
-.focus-grid,.areas,.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.focus-card,.legal-card,.area-card{padding:30px}
-.focus-card ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px}
-.focus-card li{position:relative;padding-left:24px;color:#334155;line-height:1.55}
-.focus-card li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:950}
+.premium-visual{
+min-height:480px;
+border-radius:34px;
+background:
+linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.30)),
+url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=90");
+background-size:cover;
+background-position:center;
+box-shadow:var(--shadow)
+}
 
-.work{overflow:hidden}
-.work-img{min-height:230px;background-size:cover;background-position:center}
-.w1{background-image:url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=80")}
-.w2{background-image:url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80")}
-.w3{background-image:url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80")}
-.work-content{padding:22px}
-.work small{display:inline-flex;margin-bottom:10px;padding:7px 10px;border-radius:999px;background:#eff6ff;color:var(--blue2);font-weight:900}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.feature{
+padding:32px;border-radius:30px;background:white;border:1px solid var(--line);
+box-shadow:0 14px 42px rgba(15,23,42,.06)
+}
+.feature ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:11px}
+.feature li{position:relative;padding-left:26px;color:#334155;line-height:1.58}
+.feature li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:950}
 
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{padding:28px;border-radius:26px;background:white;border:1px solid var(--line);box-shadow:0 14px 40px rgba(15,23,42,.06)}
-.step span{width:54px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:#eff6ff;color:var(--blue);font-weight:950;margin-bottom:16px}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work{
+overflow:hidden;border-radius:30px;background:white;
+border:1px solid var(--line);
+box-shadow:0 14px 42px rgba(15,23,42,.07)
+}
+.work-visual{
+height:260px;
+position:relative;
+overflow:hidden;
+background:#0b1220;
+}
+.work-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.20))}
+.visual-renovation{
+background:
+linear-gradient(135deg,rgba(7,94,200,.08),rgba(255,255,255,.05)),
+url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=90");
+background-size:cover;background-position:center
+}
+.visual-board{
+background:
+linear-gradient(135deg,#eef6ff,#ffffff);
+}
+.visual-board .panel{
+position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+width:72%;height:72%;border-radius:18px;background:#f8fafc;border:1px solid #cbd5e1;
+box-shadow:0 18px 40px rgba(15,23,42,.15);padding:18px;
+display:grid;grid-template-columns:repeat(4,1fr);gap:10px
+}
+.visual-board .panel span{border-radius:8px;background:linear-gradient(180deg,#dbeafe,#bfdbfe);border:1px solid #93c5fd}
+.visual-lighting{
+background:
+radial-gradient(circle at 50% 10%,rgba(255,210,74,.65),transparent 24%),
+linear-gradient(135deg,#172033,#0b1220);
+}
+.visual-lighting:after{
+content:"";
+position:absolute;left:12%;right:12%;bottom:18%;
+height:42%;border-radius:24px;
+background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.04));
+border:1px solid rgba(255,255,255,.14)
+}
+.work-content{padding:24px}
+.work small{
+display:inline-flex;margin-bottom:12px;padding:8px 11px;border-radius:999px;
+background:#eff6ff;color:var(--blue2);font-weight:950
+}
+.work h3{font-size:1.28rem;margin-bottom:8px}
 
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{
+padding:28px;border-radius:26px;background:white;border:1px solid var(--line);
+box-shadow:0 14px 42px rgba(15,23,42,.06)
+}
+.step span{
+width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+background:#eff6ff;color:var(--blue);font-weight:950;margin-bottom:16px
+}
+
+.areas,.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.area-card,.legal-card{
+padding:30px;border-radius:28px;background:white;border:1px solid var(--line);
+box-shadow:0 14px 42px rgba(15,23,42,.06)
+}
 .area-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .area-tags span{padding:10px 13px;border-radius:999px;background:#eff6ff;color:var(--blue2);font-weight:900}
 
-.review{padding:28px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{
+padding:28px;border-radius:28px;background:white;border:1px solid var(--line);
+box-shadow:0 14px 42px rgba(15,23,42,.06)
+}
 .stars{color:#f59e0b;font-size:1.15rem;margin-bottom:12px}
-.review strong{display:block;margin-top:18px;color:#06101f}
+.review strong{display:block;margin-top:18px;color:var(--dark)}
 .review span{color:var(--muted);font-size:.9rem}
 
 .cta-band{background:linear-gradient(135deg,var(--blue),var(--blue2));color:white}
 .cta-card{display:flex;justify-content:space-between;align-items:center;gap:28px}
-.cta-card h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.06;margin:0 0 14px;color:white}
+.cta-card h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.06;margin:0 0 14px;color:white}
 .cta-card p{color:#dbeafe;line-height:1.7;max-width:680px}
 
 .faq-list{display:grid;gap:14px;max-width:900px}
 details{padding:22px;border-radius:20px;background:white;border:1px solid var(--line)}
-summary{cursor:pointer;font-weight:950;color:#06101f}
+summary{cursor:pointer;font-weight:950;color:var(--dark)}
 details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 
-.footer{background:#06101f;color:white;padding:46px 0}
+.footer{background:var(--dark);color:white;padding:46px 0}
 .footer-row{display:flex;justify-content:space-between;gap:28px;align-items:flex-start}
 .footer strong{font-size:1.25rem}
 .footer p{color:#cbd5e1}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap;color:#cbd5e1}
-.demo-note{margin-top:18px;padding:14px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#cbd5e1;font-size:.9rem}
+.demo-note{
+margin-top:18px;padding:14px;border-radius:16px;
+background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+color:#cbd5e1;font-size:.9rem
+}
 
 @media(max-width:1000px){
-.hero-grid,.two-col,.areas,.cta-card,.focus-grid,.legal-grid{grid-template-columns:1fr;display:grid}
-.services-grid,.works,.reviews,.process-grid,.trust-row{grid-template-columns:repeat(2,1fr)}
+.hero-grid,.two-col,.features-grid,.areas,.cta-card,.legal-grid{grid-template-columns:1fr;display:grid}
+.services-grid,.works,.reviews,.steps,.trust-row{grid-template-columns:repeat(2,1fr)}
 .nav{display:none}
 }
 @media(max-width:760px){
 .container{width:min(calc(100% - 28px),var(--container))}
 .header-row{flex-direction:column;align-items:flex-start;padding:16px 0}
-.hero{padding:70px 0 46px}
-.services-grid,.works,.reviews,.process-grid,.trust-row{grid-template-columns:1fr}
+.hero{padding:72px 0 48px}
+.services-grid,.works,.reviews,.steps,.trust-row{grid-template-columns:1fr}
 .footer-row{flex-direction:column}
-.hero h1{font-size:clamp(2.2rem,10vw,3.3rem)}
+.hero h1{font-size:clamp(2.2rem,10vw,3.35rem)}
 }
 </style>
 </head>
@@ -144,7 +296,6 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 
 <nav class="nav">
 <a href="#services">Services</a>
-<a href="#confiance">Pourquoi nous</a>
 <a href="#realisations">Réalisations</a>
 <a href="#zone">Zone</a>
 <a href="#contact">Contact</a>
@@ -160,12 +311,12 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 <div class="container hero-grid">
 <div>
 <span class="eyebrow">Électricien à Borgo & Haute-Corse</span>
-<h1>Dépannage, rénovation et installation électrique <span>avec un travail propre et sécurisé.</span></h1>
-<p>Voltaris Électricité intervient à Borgo, Bastia, Biguglia et Lucciana pour les dépannages, rénovations, tableaux électriques, éclairages, bornes de recharge et solutions de sécurité.</p>
+<h1>Dépannage, rénovation et installation électrique <span>avec un rendu propre et sécurisé.</span></h1>
+<p>Interventions à Borgo, Bastia, Biguglia et Lucciana pour les particuliers et professionnels : dépannage, rénovation, tableau électrique, éclairage, borne de recharge et sécurité.</p>
 
 <div class="hero-actions">
-<a class="btn btn-yellow" href="tel:+33600000000">06 00 00 00 00</a>
-<a class="btn btn-secondary" href="mailto:contact@voltaris-electricite.fr">Demander un devis</a>
+<a class="btn btn-gold" href="tel:+33600000000">06 00 00 00 00</a>
+<a class="btn btn-light" href="mailto:contact@voltaris-electricite.fr">Demander un devis</a>
 </div>
 
 <div class="hero-proof">
@@ -176,9 +327,9 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 </div>
 </div>
 
-<div class="request-card">
+<div class="hero-card">
 <h2>Une panne ou un projet électrique ?</h2>
-<p>Expliquez votre besoin en quelques mots. Une réponse claire est apportée selon la disponibilité et le type d’intervention.</p>
+<p>Expliquez votre besoin et recevez une réponse claire selon la disponibilité, la zone et le type d’intervention.</p>
 
 <div class="info-list">
 <div><strong>Dépannage</strong><span>Selon disponibilité</span></div>
@@ -204,13 +355,13 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 <section class="section" id="services">
 <div class="container heading center">
 <span class="eyebrow">Prestations</span>
-<h2>Des services électriques clairs et utiles.</h2>
-<p>Les prestations principales sont présentées simplement pour que le visiteur comprenne vite si l’entreprise peut répondre à son besoin.</p>
+<h2>Des services électriques clairs, propres et professionnels.</h2>
+<p>Une présentation simple pour comprendre rapidement les interventions proposées.</p>
 </div>
 
 <div class="container services-grid">
 <article class="service"><div class="icon">⚡</div><h3>Dépannage électrique</h3><p>Panne, disjonction, prise défectueuse, éclairage ou problème sur tableau.</p></article>
-<article class="service"><div class="icon">🏠</div><h3>Rénovation électrique</h3><p>Remise au propre d’une installation dans un logement ou un local.</p></article>
+<article class="service"><div class="icon">🏠</div><h3>Rénovation électrique</h3><p>Reprise d’installation dans un appartement, une maison ou un local.</p></article>
 <article class="service"><div class="icon">🧰</div><h3>Tableau électrique</h3><p>Remplacement, organisation, protections et repérage des circuits.</p></article>
 <article class="service"><div class="icon">💡</div><h3>Éclairage</h3><p>Création ou remplacement d’éclairages intérieurs et extérieurs.</p></article>
 <article class="service"><div class="icon">🔋</div><h3>Borne de recharge</h3><p>Alimentation dédiée et protection adaptée pour véhicule électrique.</p></article>
@@ -218,35 +369,35 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 </div>
 </section>
 
-<section class="section alt" id="confiance">
+<section class="section alt">
 <div class="container two-col">
 <div>
-<span class="eyebrow">Pourquoi choisir Voltaris</span>
-<h2>Une intervention claire, propre et rassurante.</h2>
-<p>Le site met en avant les éléments qui rassurent immédiatement : explications simples, finitions propres, contact facile et zone d’intervention précise.</p>
+<span class="eyebrow">Méthode</span>
+<h2>Un travail propre, lisible et rassurant.</h2>
+<p>Le site valorise ce qu’un client attend vraiment d’un électricien : clarté, sécurité, finitions propres et contact simple.</p>
 
 <div class="checks">
 <div><strong>✓</strong><span>Explications simples avant intervention</span></div>
 <div><strong>✓</strong><span>Solutions adaptées au logement ou au local</span></div>
-<div><strong>✓</strong><span>Travail propre et finitions soignées</span></div>
+<div><strong>✓</strong><span>Finitions propres et travail organisé</span></div>
 <div><strong>✓</strong><span>Contact rapide par téléphone ou email</span></div>
 </div>
 </div>
 
-<div class="photo-card"></div>
+<div class="premium-visual"></div>
 </div>
 </section>
 
 <section class="section alt">
 <div class="container heading center">
 <span class="eyebrow">Besoins fréquents</span>
-<h2>Deux services mis en avant pour convertir.</h2>
+<h2>Deux prestations mises en avant.</h2>
 </div>
 
-<div class="container focus-grid">
-<article class="focus-card">
+<div class="container features-grid">
+<article class="feature">
 <h3>Rénovation électrique</h3>
-<p>Pour moderniser une installation ancienne, reprendre les circuits et adapter les prises, éclairages et commandes.</p>
+<p>Modernisation d’une installation ancienne, ajout de prises, éclairages et circuits adaptés aux usages actuels.</p>
 <ul>
 <li>Reprise ou création de circuits</li>
 <li>Ajout prises et points lumineux</li>
@@ -255,9 +406,9 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 </ul>
 </article>
 
-<article class="focus-card">
+<article class="feature">
 <h3>Tableau électrique</h3>
-<p>Un tableau clair et bien organisé facilite la maintenance, améliore la sécurité et donne une image plus professionnelle.</p>
+<p>Un tableau bien organisé facilite la maintenance, améliore la sécurité et donne une impression de sérieux.</p>
 <ul>
 <li>Remplacement ancien tableau</li>
 <li>Protections adaptées</li>
@@ -271,35 +422,37 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 <section class="section" id="realisations">
 <div class="container heading center">
 <span class="eyebrow">Réalisations</span>
-<h2>Des visuels cohérents avec l’univers électrique.</h2>
-<p>Les images restent générales pour éviter les incohérences : chantier, intervention, tableau et câblage.</p>
+<h2>Des exemples cohérents avec l’univers électrique.</h2>
+<p>Des visuels sobres et crédibles pour montrer le type de rendu attendu.</p>
 </div>
 
 <div class="container works">
 <article class="work">
-<div class="work-img w1"></div>
+<div class="work-visual visual-renovation"></div>
 <div class="work-content">
-<small>Intervention</small>
-<h3>Travaux électriques</h3>
-<p>Exemple de rendu pour présenter des interventions sur chantier ou logement.</p>
+<small>Chantier</small>
+<h3>Intervention électrique</h3>
+<p>Travaux électriques en logement ou local professionnel.</p>
 </div>
 </article>
 
 <article class="work">
-<div class="work-img w2"></div>
+<div class="work-visual visual-board">
+<div class="panel"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</div>
 <div class="work-content">
-<small>Rénovation</small>
-<h3>Installation en rénovation</h3>
-<p>Présentation d’une intervention liée à une reprise ou adaptation électrique.</p>
+<small>Tableau</small>
+<h3>Tableau électrique</h3>
+<p>Organisation, protections et repérage des circuits.</p>
 </div>
 </article>
 
 <article class="work">
-<div class="work-img w3"></div>
+<div class="work-visual visual-lighting"></div>
 <div class="work-content">
-<small>Technique</small>
-<h3>Tableau & câblage</h3>
-<p>Mise en avant d’un travail technique, propre et organisé.</p>
+<small>Éclairage</small>
+<h3>Éclairage & finitions</h3>
+<p>Installation propre pour intérieur, extérieur ou commerce.</p>
 </div>
 </article>
 </div>
@@ -307,14 +460,14 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 
 <section class="section alt">
 <div class="container heading center">
-<span class="eyebrow">Méthode</span>
-<h2>Un fonctionnement simple.</h2>
+<span class="eyebrow">Process</span>
+<h2>Un déroulement simple.</h2>
 </div>
 
-<div class="container process-grid">
-<article class="step"><span>01</span><h3>Échange</h3><p>Le besoin est expliqué par téléphone ou email.</p></article>
-<article class="step"><span>02</span><h3>Analyse</h3><p>Les photos, contraintes et informations sont étudiées.</p></article>
-<article class="step"><span>03</span><h3>Proposition</h3><p>Une solution claire est proposée selon le projet.</p></article>
+<div class="container steps">
+<article class="step"><span>01</span><h3>Échange</h3><p>Vous expliquez votre besoin.</p></article>
+<article class="step"><span>02</span><h3>Analyse</h3><p>Les informations et photos sont étudiées.</p></article>
+<article class="step"><span>03</span><h3>Proposition</h3><p>Une solution claire est proposée.</p></article>
 <article class="step"><span>04</span><h3>Intervention</h3><p>Le travail est réalisé proprement.</p></article>
 </div>
 </section>
@@ -323,7 +476,7 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 <div class="container heading center">
 <span class="eyebrow">Zone d’intervention</span>
 <h2>Électricien à Borgo, Bastia, Biguglia et Lucciana.</h2>
-<p>Voltaris Électricité est basé à Borgo et intervient autour des communes proches selon disponibilité.</p>
+<p>Basé à Borgo, Voltaris Électricité intervient autour des communes proches selon disponibilité.</p>
 </div>
 
 <div class="container areas">
@@ -348,8 +501,8 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 <section class="section alt">
 <div class="container heading center">
 <span class="eyebrow">Avis clients</span>
-<h2>Des avis courts et crédibles.</h2>
-<p>Avis fictifs utilisés uniquement pour illustrer le rendu d’un site client.</p>
+<h2>Des retours courts et crédibles.</h2>
+<p>Avis fictifs utilisés uniquement pour illustrer le rendu du site.</p>
 </div>
 
 <div class="container reviews">
@@ -366,8 +519,8 @@ details p{margin-bottom:0;color:var(--muted);line-height:1.7}
 <p>Décrivez votre projet ou votre panne pour obtenir une réponse claire.</p>
 </div>
 <div class="hero-actions">
-<a class="btn btn-secondary" href="tel:+33600000000">Appeler</a>
-<a class="btn btn-secondary" href="mailto:contact@voltaris-electricite.fr">Demander un devis</a>
+<a class="btn btn-light" href="tel:+33600000000">Appeler</a>
+<a class="btn btn-light" href="mailto:contact@voltaris-electricite.fr">Demander un devis</a>
 </div>
 </div>
 </section>
